@@ -1,0 +1,15 @@
+.category { 
+	font-family: 'Roboto Condensed', sans-serif;
+	line-height: 150px;
+	color: #FFF;
+	font-size: 2em;
+}
+
+.category-lg { 
+	font-family: 'Roboto Condensed', sans-serif;
+	line-height: 300px;
+}
+
+.category .row div {
+	padding-left: 30px;
+}
