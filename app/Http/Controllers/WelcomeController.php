@@ -1,5 +1,8 @@
 <?php namespace App\Http\Controllers;
 
+use App\Models\Category;
+
+
 class WelcomeController extends Controller {
 
 	/*
@@ -30,7 +33,8 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('layout.master');
+		$categories = Category::all();
+		return view('layout.master',compact('categories','tmpStyle'));
 	}
 
 }
