@@ -13,16 +13,16 @@
     <link rel="stylesheet" href="{!! asset('css/demo.css') !!}">
     </head>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
+<!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+          
+  
+
   <body>
-    <!-- Navbars
-      ================================================== -->
+    <!-- Navbars   ================================================== -->
     <div class="row">
               <div class="col-md-12">
                 <nav class="navbar navbar-inverse" role="navigation">
@@ -90,9 +90,20 @@
             </div>
 
           </div>
+  </div>
+<ul>
 
+  
+<i> <font face="Light ITALIC" size="12" color="006600 " style="text-decoration: underline" ; > New Release !</font>
+<hr> </i>
+
+
+
+
+
+</ul>
           
-      </div>
+    <a href="###">
       <div class="example">          
           <div class="row">
               <div class="col-sm-6 col-md-3">
@@ -105,6 +116,8 @@
                   </div>
                 </div>
               </div>
+              </a>
+             <a href="###">
               <div class="col-sm-6 col-md-3">
                 <div class="thumbnail">
                   <img class="img-rounded" src="images/thumbnail-2.jpg">
@@ -115,6 +128,8 @@
                   </div>
                 </div>
               </div>
+              </a>
+              <a href="###">
               <div class="col-sm-6 col-md-3">
                 <div class="thumbnail">
                   <img class="img-rounded" src="images/thumbnail-3.jpg">
@@ -125,6 +140,8 @@
                   </div>
                 </div>
               </div>
+              </a>
+              <a href="###">
               <div class="col-sm-6 col-md-3">
                 <div class="thumbnail">
                   <img class="img-rounded" src="images/thumbnail-4.jpg">
@@ -137,8 +154,155 @@
               </div>
             </div>
       </div>
+   </a>
+
+
+       <a href="###">
+      <div class="example">          
+          <div class="row">
+              <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                  <img class="img-rounded" src="images/thumbnail-1.jpg">
+                  <div class="caption text-center">
+                    <h3>Thumbnail label</h3>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id ...</p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              </a>
+             <a href="###">
+              <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                  <img class="img-rounded" src="images/thumbnail-2.jpg">
+                  <div class="caption text-center">
+                    <h3>Thumbnail label</h3>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id ...</p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              </a>
+              <a href="###">
+              <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                  <img class="img-rounded" src="images/thumbnail-3.jpg">
+                  <div class="caption text-center">
+                    <h3>Thumbnail label</h3>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id ...</p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              </a>
+              <a href="###">
+              <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                  <img class="img-rounded" src="images/thumbnail-4.jpg">
+                  <div class="caption text-center">
+                    <h3>Thumbnail label</h3>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id ...</p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+   </a>
+
+
+
+
+     <a href="###">
+      <div class="example">          
+          <div class="row">
+              <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                  <img class="img-rounded" src="images/thumbnail-1.jpg">
+                  <div class="caption text-center">
+                    <h3>Thumbnail label</h3>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id ...</p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              </a>
+             <a href="###">
+              <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                  <img class="img-rounded" src="images/thumbnail-2.jpg">
+                  <div class="caption text-center">
+                    <h3>Thumbnail label</h3>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id ...</p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              </a>
+              <a href="###">
+              <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                  <img class="img-rounded" src="images/thumbnail-3.jpg">
+                  <div class="caption text-center">
+                    <h3>Thumbnail label</h3>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id ...</p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              </a>
+              <a href="###">
+              <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                  <img class="img-rounded" src="images/thumbnail-4.jpg">
+                  <div class="caption text-center">
+                    <h3>Thumbnail label</h3>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id ...</p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+   </a>
+ 
+
+
+<!-- Browse Courses Button-->
+<button type="button" class="btn btn-primary btn-lg btn-block " size="25" style="background-color:#003399;height:80px">Browse Courses</button>
+</div>
+</div>
+
+<ul>
+
+</ul>
+
+
+<!--     Footer   -->  
+    <div class="footer" style="background-color:#101010 ;height:40px;">
+        <div class="col-lg-12">
+
+            <ul class="nav nav-pills nav-justified">
+                <a class="grey-text text-lighten-5 " style="color:#3333FF ;height:40px;" href="#">About us</a>
+                
+
+                <li align = "right"> © 2015 Company Name.</li>
+
+
+            </ul>
+      
+        </div>
     </div>
-    <!-- Bootstrap -->
+
+  </body>
+
+    
+
+</html>
+
+
+
+<!-- Bootstrap -->
     <script src="{!! asset('js/jquery.min.js') !!}"></script>
     <script src="{!! asset('js/bootstrap.min.js') !!}"></script>
 
@@ -146,5 +310,8 @@
     <script src="{!! asset('bootflat/js/icheck.min.js') !!}"></script>
     <script src="{!! asset('bootflat/js/jquery.fs.selecter.min.js') !!}"></script>
     <script src="{!! asset('bootflat/js/jquery.fs.stepper.min.js') !!}"></script>
-  </body>
-</html>
+
+
+
+
+
