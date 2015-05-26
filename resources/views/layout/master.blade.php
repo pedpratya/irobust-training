@@ -7,6 +7,10 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Bootstrap 101 Template</title>
 
+    <!-- Faith -->
+    <link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+    <!-- End Faith -->
+
     <link rel="stylesheet" href="{!! asset('css/bootstrap.min.css') !!}">
     <link rel="stylesheet" href="{!! asset('bootflat/css/bootflat.css') !!}">
 
@@ -67,7 +71,25 @@
     <div class="container documents">
       <div class="category">  
           <div class="row">
-            <div class="col-md-3 col-sm-12 category-lg" style="background-color:#4BA883;height:300px;">
+
+        @foreach ($categories as $category)
+
+          @if ($category->size == 4)
+            <div class="col-md-3 col-sm-12 category-lg" style="font-family: 'Lato', sans-serif;font-size: 35px;background-color:#4BA883;height:300px;">
+                  <center>{!! $category->name !!}</center>
+            </div>
+          @elseif ($category->size == 2)
+
+            <?php
+                $rand = array('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f');
+                $color = '#'.$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)];
+            ?>
+            <div class="col-md-3 col-sm-6" style="font-family: 'Lato', sans-serif;font-size: 25px;background-color:<?php echo $color?>;height:150px;">
+                  <center>{!! $category->name !!}</center>
+            </div>
+          @endif
+
+<!--             <div class="col-md-3 col-sm-12 category-lg" style="background-color:#4BA883;height:300px;">
                   Excel
             </div>
             <div class="col-md-3 col-sm-6" style="background-color:#6D6E35;height:150px;">
@@ -87,7 +109,9 @@
             </div>
             <div class="col-md-3 col-sm-12" style="background-color:#746E84;height:150px;">
                   Teacher     
-            </div>
+            </div> -->
+
+        @endforeach
 
           </div>
   </div>
