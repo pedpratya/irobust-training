@@ -1,0 +1,36 @@
+[2015-05-15 05:04:27] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::getCachedCompilePath()' in /Applications/XAMPP/xamppfiles/htdocs/irobust-training/vendor/laravel/framework/src/Illuminate/Foundation/Console/ClearCompiledCommand.php:28
+Stack trace:
+#0 {main}  
+[2015-05-15 05:07:31] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::getCachedCompilePath()' in /Applications/XAMPP/xamppfiles/htdocs/irobust-training/vendor/laravel/framework/src/Illuminate/Foundation/Console/ClearCompiledCommand.php:28
+Stack trace:
+#0 {main}  
+[2015-05-15 05:10:02] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::getCachedCompilePath()' in /Applications/XAMPP/xamppfiles/htdocs/irobust-training/vendor/laravel/framework/src/Illuminate/Foundation/Console/ClearCompiledCommand.php:28
+Stack trace:
+#0 {main}  
+[2015-05-15 05:13:51] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::getCachedCompilePath()' in /Applications/XAMPP/xamppfiles/htdocs/irobust-training/vendor/laravel/framework/src/Illuminate/Foundation/Console/ClearCompiledCommand.php:28
+Stack trace:
+#0 {main}  
+[2015-05-15 05:14:24] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::getCachedCompilePath()' in /Applications/XAMPP/xamppfiles/htdocs/irobust-training/vendor/laravel/framework/src/Illuminate/Foundation/Console/ClearCompiledCommand.php:28
+Stack trace:
+#0 {main}  
+[2015-05-15 05:15:06] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::getCachedCompilePath()' in /Applications/XAMPP/xamppfiles/htdocs/irobust-training/vendor/laravel/framework/src/Illuminate/Foundation/Console/ClearCompiledCommand.php:28
+Stack trace:
+#0 {main}  
+[2015-05-15 05:15:58] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::getCachedCompilePath()' in /Applications/XAMPP/xamppfiles/htdocs/irobust-training/vendor/laravel/framework/src/Illuminate/Foundation/Console/OptimizeCommand.php:85
+Stack trace:
+#0 {main}  
+[2015-05-15 05:17:19] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::getCachedCompilePath()' in /Applications/XAMPP/xamppfiles/htdocs/irobust-training/vendor/laravel/framework/src/Illuminate/Foundation/Console/ClearCompiledCommand.php:28
+Stack trace:
+#0 {main}  
+[2015-05-15 05:51:19] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '!', expecting ',' or ';'' in /Applications/XAMPP/xamppfiles/htdocs/irobust-training/storage/framework/views/9134e5b5f90131d90c3240ef91c47a4e:13
+Stack trace:
+#0 {main}  
+[2015-05-15 05:51:22] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '!', expecting ',' or ';'' in /Applications/XAMPP/xamppfiles/htdocs/irobust-training/storage/framework/views/9134e5b5f90131d90c3240ef91c47a4e:13
+Stack trace:
+#0 {main}  
+[2015-05-15 05:52:34] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '!', expecting ',' or ';'' in /Applications/XAMPP/xamppfiles/htdocs/irobust-training/storage/framework/views/9134e5b5f90131d90c3240ef91c47a4e:13
+Stack trace:
+#0 {main}  
+[2015-05-15 05:54:01] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '!', expecting ',' or ';'' in /Applications/XAMPP/xamppfiles/htdocs/irobust-training/storage/framework/views/9134e5b5f90131d90c3240ef91c47a4e:13
+Stack trace:
+#0 {main}  
