@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>Category</title>
 
     <link rel="stylesheet" href="{!! asset('css/bootstrap.min.css') !!}">
     <link rel="stylesheet" href="{!! asset('bootflat/css/bootflat.css') !!}">
@@ -66,64 +66,19 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<ul>
-
-</ul>
-
-
-<!--     Footer   -->  
-    <div class="footer" style="background-color:#101010 ;height:40px;">
-        <div class="col-lg-12">
-
-            <ul class="nav nav-pills nav-justified">
-                <a class="grey-text text-lighten-5 " style="color:#3333FF ;height:40px;" href="#">About us</a>
-                
-
-                <li align = "right"> © 2015 Company Name.</li>
-
-
-            </ul>
-      
-        </div>
+    <div class="col-md-12" style="height:100%;background-color:#1A1A1A;">
+    <div class="container">
+    <div class="copyRights">
+    <p class="text-center"><br><font color ="white">Copyrights © 2015 - icb@solution</font></p>
+    </div>
+    </div>
     </div>
 
-
-
-
-</body>
-
-    
+  </body>  
 
 </html>
 
-
-
-<!-- Bootstrap -->
+<!-- Bootstrap
     <script src="{!! asset('js/jquery.min.js') !!}"></script>
     <script src="{!! asset('js/bootstrap.min.js') !!}"></script>
 
@@ -131,5 +86,6 @@
     <script src="{!! asset('bootflat/js/icheck.min.js') !!}"></script>
     <script src="{!! asset('bootflat/js/jquery.fs.selecter.min.js') !!}"></script>
     <script src="{!! asset('bootflat/js/jquery.fs.stepper.min.js') !!}"></script>
+
 
 

@@ -68,7 +68,9 @@
               </div>
     </div>
 
-    <div class="container documents">
+
+
+  <div class="container documents">
       <div class="category">  
           <div class="row">
 
@@ -92,16 +94,13 @@
         @endforeach
 
           </div>
-  </div>
-<ul>
+      </div>
 
-  
-<i> <font face="Light ITALIC" size="12" color="#006600" style="text-decoration: underline" ; > New Release !</font>
-<hr> </i>
+      <ul>
+        <i> <font face="Light ITALIC" size="12" color="#006600" style="text-decoration: underline" ; > New Release !</font></i>
+        <hr> 
+      </ul>
 
-
-
-</ul>
 <!-- New Release -->
       <div class="example">          
         <div class="row">
@@ -110,31 +109,52 @@
               @if ($course->is_new_release == 1 && $j < 4)
                 <div class="col-sm-6 col-md-3">
                   <a href="###">
-                    <div class="thumbnail">
+                    <div class="thumbnail" style="width:190px; height:250px; ">
+                      <!-- Use Picture From course(id) -->
                       <img class="img-rounded" src="images/new_release/course<?php echo $course->id ?>.jpg">
                       <div class="caption text-center">
-                        <font size="3">{!! $course->name !!}</font>
-                        <p>{!! $course->description !!}</p>
+
+                        <!-- Use Text From course(name) -->
+                        <font size="3"><?php echo substr_utf8( $course->name, 0 , 50) ?></font>
+                        <!-- Use Text From course(description) -->
+                        <p><?php echo substr_utf8( $course->description, 0 , 50) ?></p>
+
+
                       </div>
                     </div>
                   </a>
                 </div>
               <?php $j++; ?>
               @endif
-          @endforeach
+            @endforeach
+          </div>
         </div>
-      </div>
 <!-- End New Release -->
+      <hr>
+
+    </div>
 
 
-  </body>
-    
+
+    <div class="container">
+    <a class="btn btn-primary btn-block" href="http://localhost/irobust-training/public/category" role="button">Browse Course</a>
+    </div>
+
+    <br>
+
+    <div class="col-md-12" style="height:100%;background-color:#1A1A1A;">
+    <div class="container">
+    <div class="copyRights">
+    <p class="text-center"><br><font color ="white">Copyrights © 2015 - icb@solution</font></p>
+    </div>
+    </div>
+    </div>
+
+  </body>  
 
 </html>
 
-
-
-<!-- Bootstrap -->
+<!-- Bootstrap
     <script src="{!! asset('js/jquery.min.js') !!}"></script>
     <script src="{!! asset('js/bootstrap.min.js') !!}"></script>
 
@@ -144,6 +164,39 @@
     <script src="{!! asset('bootflat/js/jquery.fs.stepper.min.js') !!}"></script>
 
 
+<!-- substr and insert ... -->
+          <?php
+          //- ส่วนของการประกาศ Function --------------------------------------------------------
+              function utf8_to_tis620($string) {
+                 $str = $string;
+                 $res = "";
+                 for ($i = 0; $i < strlen($str); $i++) {
+                   if (ord($str[$i]) == 224) {
+                     $unicode = ord($str[$i+2]) & 0x3F;
+                     $unicode |= (ord($str[$i+1]) & 0x3F) << 6;
+                     $unicode |= (ord($str[$i]) & 0x0F) << 12;
+                     $res .= chr($unicode-0x0E00+0xA0);
+                     $i += 2;
+                   } else {
+                     $res .= $str[$i];
+                   }
+                 }
+                 return $res;
+               }
+           
+              function substr_utf8( $str, $start_p , $len_p) {
+                 $str_post = "";
+                 if(strlen(utf8_to_tis620($str)) > $len_p)
+                 {
+                   $str_post = "...";
+                 }
+                 return preg_replace( '#^(?:[\x00-\x7F]|[\xC0-\xFF][\x80-\xBF]+){0,'.$start_p.'}'.
+                  '((?:[\x00-\x7F]|[\xC0-\xFF][\x80-\xBF]+){0,'.$len_p.'}).*#s',
+                  '$1' , $str ) . $str_post;
+               };
+            //--------------------------------------------------------------------------------------------
+          
+        ?>
 
 
 
