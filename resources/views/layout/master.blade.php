@@ -81,36 +81,14 @@
           @elseif ($category->size == 2)
 
             <?php
-                $rand = array('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f');
-                $color = '#'.$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)];
+                $i++;
+                // insert color for category
+                $color = array('#4BA883','#6D6E35', '#D5C312', '#E93E00', '#3B3C4D', '#006A90', '#746E84');
             ?>
-            <div class="col-md-3 col-sm-6" style="font-family: 'Lato', sans-serif;font-size: 25px;background-color:<?php echo $color?>;height:150px;">
+            <div class="col-md-3 col-sm-6" style="font-family: 'Lato', sans-serif;font-size: 25px;background-color:<?php echo $color[$i]?>;height:150px;">
                   <center>{!! $category->name !!}</center>
             </div>
           @endif
-
-<!--             <div class="col-md-3 col-sm-12 category-lg" style="background-color:#4BA883;height:300px;">
-                  Excel
-            </div>
-            <div class="col-md-3 col-sm-6" style="background-color:#6D6E35;height:150px;">
-                  Web     
-            </div>
-            <div class="col-md-3 col-sm-6" style="background-color:#D5C312;height:150px;">
-                  Programming     
-            </div>
-            <div class="col-md-3 col-sm-12" style="background-color:#E93E00;height:150px;">
-                  Database     
-            </div> 
-            <div class="col-md-3 col-sm-6" style="background-color:#3B3C4D;height:150px;">
-                  Mobile    
-            </div>
-            <div class="col-md-3 col-sm-6" style="background-color:#006A90;height:150px;">
-                  CMS    
-            </div>
-            <div class="col-md-3 col-sm-12" style="background-color:#746E84;height:150px;">
-                  Teacher     
-            </div> -->
-
         @endforeach
 
           </div>
@@ -118,211 +96,38 @@
 <ul>
 
   
-<i> <font face="Light ITALIC" size="12" color="006600 " style="text-decoration: underline" ; > New Release !</font>
+<i> <font face="Light ITALIC" size="12" color="#006600" style="text-decoration: underline" ; > New Release !</font>
 <hr> </i>
 
 
 
-
-
 </ul>
-          
-    <a href="###">
+<!-- New Release -->
       <div class="example">          
-          <div class="row">
-              <div class="col-sm-6 col-md-3">
-                <div class="thumbnail">
-                  <img class="img-rounded" src="images/thumbnail-1.jpg">
-                  <div class="caption text-center">
-                    <h3>Thumbnail label</h3>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id ...</p>
-                    <p></p>
-                  </div>
+        <div class="row">
+          <?php $j = 0 ?>
+            @foreach ($courses as $course)
+              @if ($course->is_new_release == 1 && $j < 4)
+                <div class="col-sm-6 col-md-3">
+                  <a href="###">
+                    <div class="thumbnail">
+                      <img class="img-rounded" src="images/thumbnail-1.jpg">
+                      <div class="caption text-center">
+                        <font size="3">{!! $course->name !!}</font>
+                        <p>{!! $course->description !!}</p>
+                      </div>
+                    </div>
+                  </a>
                 </div>
-              </div>
-              </a>
-             <a href="###">
-              <div class="col-sm-6 col-md-3">
-                <div class="thumbnail">
-                  <img class="img-rounded" src="images/thumbnail-2.jpg">
-                  <div class="caption text-center">
-                    <h3>Thumbnail label</h3>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id ...</p>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-              </a>
-              <a href="###">
-              <div class="col-sm-6 col-md-3">
-                <div class="thumbnail">
-                  <img class="img-rounded" src="images/thumbnail-3.jpg">
-                  <div class="caption text-center">
-                    <h3>Thumbnail label</h3>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id ...</p>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-              </a>
-              <a href="###">
-              <div class="col-sm-6 col-md-3">
-                <div class="thumbnail">
-                  <img class="img-rounded" src="images/thumbnail-4.jpg">
-                  <div class="caption text-center">
-                    <h3>Thumbnail label</h3>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id ...</p>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-      </div>
-   </a>
-
-
-       <a href="###">
-      <div class="example">          
-          <div class="row">
-              <div class="col-sm-6 col-md-3">
-                <div class="thumbnail">
-                  <img class="img-rounded" src="images/thumbnail-1.jpg">
-                  <div class="caption text-center">
-                    <h3>Thumbnail label</h3>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id ...</p>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-              </a>
-             <a href="###">
-              <div class="col-sm-6 col-md-3">
-                <div class="thumbnail">
-                  <img class="img-rounded" src="images/thumbnail-2.jpg">
-                  <div class="caption text-center">
-                    <h3>Thumbnail label</h3>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id ...</p>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-              </a>
-              <a href="###">
-              <div class="col-sm-6 col-md-3">
-                <div class="thumbnail">
-                  <img class="img-rounded" src="images/thumbnail-3.jpg">
-                  <div class="caption text-center">
-                    <h3>Thumbnail label</h3>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id ...</p>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-              </a>
-              <a href="###">
-              <div class="col-sm-6 col-md-3">
-                <div class="thumbnail">
-                  <img class="img-rounded" src="images/thumbnail-4.jpg">
-                  <div class="caption text-center">
-                    <h3>Thumbnail label</h3>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id ...</p>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-      </div>
-   </a>
-
-
-
-
-     <a href="###">
-      <div class="example">          
-          <div class="row">
-              <div class="col-sm-6 col-md-3">
-                <div class="thumbnail">
-                  <img class="img-rounded" src="images/thumbnail-1.jpg">
-                  <div class="caption text-center">
-                    <h3>Thumbnail label</h3>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id ...</p>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-              </a>
-             <a href="###">
-              <div class="col-sm-6 col-md-3">
-                <div class="thumbnail">
-                  <img class="img-rounded" src="images/thumbnail-2.jpg">
-                  <div class="caption text-center">
-                    <h3>Thumbnail label</h3>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id ...</p>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-              </a>
-              <a href="###">
-              <div class="col-sm-6 col-md-3">
-                <div class="thumbnail">
-                  <img class="img-rounded" src="images/thumbnail-3.jpg">
-                  <div class="caption text-center">
-                    <h3>Thumbnail label</h3>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id ...</p>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-              </a>
-              <a href="###">
-              <div class="col-sm-6 col-md-3">
-                <div class="thumbnail">
-                  <img class="img-rounded" src="images/thumbnail-4.jpg">
-                  <div class="caption text-center">
-                    <h3>Thumbnail label</h3>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id ...</p>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-      </div>
-   </a>
- 
-
-
-<!-- Browse Courses Button-->
-<button type="button" class="btn btn-primary btn-lg btn-block " size="25" style="background-color:#003399;height:80px">Browse Courses</button>
-</div>
-</div>
-
-<ul>
-
-</ul>
-
-
-<!--     Footer   -->  
-    <div class="footer" style="background-color:#101010 ;height:40px;">
-        <div class="col-lg-12">
-
-            <ul class="nav nav-pills nav-justified">
-                <a class="grey-text text-lighten-5 " style="color:#3333FF ;height:40px;" href="#">About us</a>
-                
-
-                <li align = "right"> © 2015 Company Name.</li>
-
-
-            </ul>
-      
+              <?php $j++; ?>
+              @endif
+          @endforeach
         </div>
-    </div>
-
-
+      </div>
+<!-- End New Release -->
 
 
   </body>
-
     
 
 </html>

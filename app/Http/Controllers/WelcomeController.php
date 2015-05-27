@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Course;
 
 
 class WelcomeController extends Controller {
@@ -34,7 +35,11 @@ class WelcomeController extends Controller {
 	public function index()
 	{
 		$categories = Category::all();
-		return view('layout.master',compact('categories','tmpStyle'));
+		$i = 0;
+
+		$courses = Course::all();
+
+		return view('layout.master',compact('categories','i','courses'));
 	}
 
 }
