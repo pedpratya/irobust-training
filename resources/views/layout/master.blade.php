@@ -111,7 +111,7 @@
                 <div class="col-sm-6 col-md-3">
                   <a href="###">
                     <div class="thumbnail">
-                      <img class="img-rounded" src="images/thumbnail-1.jpg">
+                      <img class="img-rounded" src="images/new_release/course<?php echo $course->id ?>.jpg">
                       <div class="caption text-center">
                         <font size="3">{!! $course->name !!}</font>
                         <p>{!! $course->description !!}</p>
