@@ -40,7 +40,7 @@ class WelcomeController extends Controller {
 		$courses = Course::all();
 
 		//return view('layout.master',compact('categories','i','courses'));
-		return view('home',compact('categories','i','courses'));
+		return view('layout.home',compact('categories','i','courses'));
 	}
 
 }

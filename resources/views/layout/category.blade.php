@@ -1,91 +1,110 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Category</title>
+@extends('layout.master')
+
+@section('content')
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
 
     <link rel="stylesheet" href="{!! asset('css/bootstrap.min.css') !!}">
-    <link rel="stylesheet" href="{!! asset('bootflat/css/bootflat.css') !!}">
+       <!--  <link rel="stylesheet" href="{!! asset('bootflat/css/bootflat.css') !!}"> -->
 
-    <link rel="stylesheet" href="{!! asset('css/demo.css') !!}">
-    </head>
 
-<!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
 
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
-          
-  
-
-  <body>
-    <!-- Navbars   ================================================== -->
-    <div class="row">
-              <div class="col-md-12">
-                <nav class="navbar navbar-inverse" role="navigation">
-                  <div class="container-fluid">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-5">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                      </button>
-                      <a class="navbar-brand" href="#">Home</a>
+        <div class="col-sm-2 col-md-2">
+          <div id="well_slidebar">
+            <div class="panel-group" id="accordion">
+              <?php $j = 0 ?>
+              @foreach ($categories as $category)
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $category->id ?>" class="collapsed"><span class="glyphicon glyphicon-folder-close">
+                            </span>{{$category->name}}</a>
+                        </h4>
                     </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-5">
-                      <ul class="nav navbar-nav">
-                        <li>
-                        <a class="navbar-brand" href="#">Browse Course</a></li>
-                        <!-- <li class="disabled"><a href="#">Link</a></li> -->
-                        <li>
-                          <a class="navbar-brand" href="#">Blog</a>
-                        </li>
-                        <li>
-                          <a class="navbar-brand" href="#">Payment</a>
-                        </li>
-                          </ul>
-                        </li>
-                      </ul>
-                      <form class="navbar-form navbar-right" role="search">
-                        <div class="form-search search-only">
-                          <i class="search-icon glyphicon glyphicon-search"></i>
-                          <input type="text" class="form-control search-query">
+                     <?php $j++; ?>
+                        <div id="collapse<?php echo $category->id ?>" class="panel-collapse collapse" style="height: 0px;">
+                            <div class="panel-body">
+                                <table class="table">
+                                    <tbody>
+                                    
+                                    @foreach ($courses as $course)
+                                      @if($course->category_id == $j)
+                                      <tr>
+                                          <td>
+                                              <span class="glyphicon glyphicon-pencil text-primary"></span><a href="http://www.jquery2dotnet.com">{{$course->name}}</a>
+                                          </td>
+                                      </tr>
+                                      @endif
+                                    @endforeach
+                                </tbody></table>
+                            </div>
                         </div>
-                      </form>
-                    </div><!-- /.navbar-collapse -->
-                  </div><!-- /.container-fluid -->
-                </nav>
-              </div>
-    </div>
+                  </div>
+              @endforeach
+            </div>
+          </div>
+        </div>
 
+        <div class="col-sm-10 col-md-10">
+                  <div class="row">
+                    <?php $j = 0 ?>
+                      @foreach ($courses as $course)
+                        @if ($course->is_new_release == 1)
+                          <div class="col-sm-6 col-md-3">
+                            <a href="###">
+                              <div class="thumbnail">
+                                <!-- Use Picture From course(id) -->
+                                <img class="img-rounded" src="images/new_release/course<?php echo $course->id ?>.jpg">
+                                <div class="caption text-center">
 
+                                  <!-- Use Text From course(name) -->
+                                  <font size="3"><?php echo substr_utf8( $course->name, 0 , 50) ?></font>
+                                  <!-- Use Text From course(description) -->
+                                  <p><?php echo substr_utf8( $course->description, 0 , 50) ?></p>
 
-    <div class="col-md-12" style="height:100%;background-color:#1A1A1A;">
-    <div class="container">
-    <div class="copyRights">
-    <p class="text-center"><br><font color ="white">Copyrights © 2015 - icb@solution</font></p>
-    </div>
-    </div>
-    </div>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                        <?php $j++; ?>
+                        @endif
+                      @endforeach
+                    </div>
+        </div>
 
-  </body>  
+        <!-- substr and insert ... -->
+          <?php
+          //- ส่วนของการประกาศ Function --------------------------------------------------------
+              function utf8_to_tis620($string) {
+                 $str = $string;
+                 $res = "";
+                 for ($i = 0; $i < strlen($str); $i++) {
+                   if (ord($str[$i]) == 224) {
+                     $unicode = ord($str[$i+2]) & 0x3F;
+                     $unicode |= (ord($str[$i+1]) & 0x3F) << 6;
+                     $unicode |= (ord($str[$i]) & 0x0F) << 12;
+                     $res .= chr($unicode-0x0E00+0xA0);
+                     $i += 2;
+                   } else {
+                     $res .= $str[$i];
+                   }
+                 }
+                 return $res;
+               }
+           
+              function substr_utf8( $str, $start_p , $len_p) {
+                 $str_post = "";
+                 if(strlen(utf8_to_tis620($str)) > $len_p)
+                 {
+                   $str_post = "...";
+                 }
+                 return preg_replace( '#^(?:[\x00-\x7F]|[\xC0-\xFF][\x80-\xBF]+){0,'.$start_p.'}'.
+                  '((?:[\x00-\x7F]|[\xC0-\xFF][\x80-\xBF]+){0,'.$len_p.'}).*#s',
+                  '$1' , $str ) . $str_post;
+               };
+            //--------------------------------------------------------------------------------------------
+          
+        ?>
 
-</html>
-
-<!-- Bootstrap
-    <script src="{!! asset('js/jquery.min.js') !!}"></script>
-    <script src="{!! asset('js/bootstrap.min.js') !!}"></script>
-
-    <!-- Bootflat's JS files.-->
-    <script src="{!! asset('bootflat/js/icheck.min.js') !!}"></script>
-    <script src="{!! asset('bootflat/js/jquery.fs.selecter.min.js') !!}"></script>
-    <script src="{!! asset('bootflat/js/jquery.fs.stepper.min.js') !!}"></script>
-
-
-
+@stop
