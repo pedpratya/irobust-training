@@ -16,6 +16,7 @@ Route::get('/', 'WelcomeController@index');
 Route::get('home', 'HomeController@index');
 
 Route::get('category','ShowCategoryController@index');
+Route::get('category2','ShowCategoryController@index2');
 
 // Test Database Faith
 

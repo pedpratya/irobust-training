@@ -15,4 +15,22 @@ class ShowCategoryController extends Controller {
 		return view('layout.category',compact('categories','i','courses'));
 	}
 
+	public function index2()
+	{
+		// $i = 0;
+    	$categories = Category::with('c_course')->get();
+  //   		foreach ($viewDatas as $key)
+  //   		{
+  //   			echo $key->name ."<br>";
+		//     	foreach ( ($key->c_course()->get() ) as $ke) {
+		//     		$i++;
+		//     		echo $ke->name ."<br>";
+		//     	}
+		//     }
+		//     echo $i;
+		// dd($viewDatas->first()->c_course()->first()->name);
+
+		return view('layout.category2',compact('categories'));
+	}
+
 }
