@@ -28,16 +28,25 @@ class testDBController extends Controller {
 		$viewDatas = Category::all();
 		return view('show',compact('viewDatas'));
 
-		// @foreach ($categories as $category)
-		// 				{!! $category->name !!} <br>
-		// 			@endforeach
 	}
 
 	public function testRelation()
     {
+    	$i = 0;
     	$viewDatas = Category::with('c_course')->get();
+    	// $viewDatas = Category::with('c_course')->find(1);
+    	// $viewDatas = Category::with('c_course')->where('id', 2)->get();
+    		foreach ($viewDatas as $key)
+    		{
+    			echo $key->name ."<br>";
+		    	foreach ( ($key->c_course()->get() ) as $ke) {
+		    		$i++;
+		    		echo $ke->name ."<br>";
+		    	}
+		    }
+		    echo $i;
+		dd($viewDatas->first()->c_course()->first()->name);
 
-		dd($viewDatas);
     }
 
 	public function testCourse()
