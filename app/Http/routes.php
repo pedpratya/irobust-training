@@ -26,6 +26,10 @@ Route::get('testDBSection', 'testDBController@testSection');
 
 // End Test
 
+// Test Relation
+Route::get('testRelation', 'testDBController@testRelation');
+// End relation
+
 Route::get('search', 'testDBController@index');
 Route::post('test', 'testDBController@searchData');
 
