@@ -17,6 +17,13 @@ Route::get('home', 'HomeController@index');
 
 Route::get('category','ShowCategoryController@index');
 Route::get('category2','ShowCategoryController@index2');
+Route::get('category2/{id}', function ($id) {
+    return 'User '.$id;
+});
+
+
+Route::get('detail-course','DetailCourseContorller@index');
+Route::get('show-course-box/{value}','ShowCourseController@getIndex');
 
 // Test Database Faith
 

@@ -34,8 +34,6 @@ class testDBController extends Controller {
     {
     	$i = 0;
     	$viewDatas = Category::with('c_course')->get();
-    	// $viewDatas = Category::with('c_course')->find(1);
-    	// $viewDatas = Category::with('c_course')->where('id', 2)->get();
     		foreach ($viewDatas as $key)
     		{
     			echo $key->name ."<br>";

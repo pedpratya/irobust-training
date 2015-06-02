@@ -2,40 +2,33 @@
 
 @section('content')
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-
     <link rel="stylesheet" href="{!! asset('css/bootstrap.min.css') !!}">
        <!--  <link rel="stylesheet" href="{!! asset('bootflat/css/bootflat.css') !!}"> -->
-
 
 
         <div class="col-sm-2 col-md-2">
           <div id="well_slidebar">
             <div class="panel-group" id="accordion">
-            <php?
-            use App\Models\Category;
-            use App\Models\Course; ?>
               @foreach ($categories as $category)
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $category->id ?>" class="collapsed"><span class="glyphicon glyphicon-folder-close">
+                            <a class="collapsed link" data-val = "{{$category->name}}" data-toggle="collapse" data-parent="#accordion" href="#collapse{!! $category->id !!}"><span class="glyphicon glyphicon-folder-close">
                             </span>{{$category->name}}</a>
                         </h4>
                     </div>
-                        <div id="collapse<?php echo $category->id ?>" class="panel-collapse collapse" style="height: 0px;">
+                        <div id="collapse{!! $category->id !!}" class="panel-collapse collapse" style="height: 0px;">
                             <div class="panel-body">
+                          
                                 <table class="table">
-                                    <tbody>
-                                    
-                                    @foreach (($key->c_course()->get() ) as $course)
+                                    <tbody>                                    
+                                    @foreach ($category->c_course as $x)
                                       <tr>
                                           <td>
-                                              <span class="glyphicon glyphicon-pencil text-primary"></span><a href="http://www.jquery2dotnet.com">{{$course->name}}</a>
+                                              <!-- <span class="glyphicon glyphicon-pencil text-primary"></span><a href="http://localhost/irobust-training/public/detail-course$url = route('routeName', $params);">{{$x->name}}</a> -->
+                                              <span class="glyphicon glyphicon-pencil text-primary"></span><a href="http://localhost/irobust-training/public/detail-course">{{$x->name}}</a>
                                           </td>
                                       </tr>
-                                      @endif
                                     @endforeach
                                 </tbody></table>
                             </div>
@@ -46,9 +39,10 @@
           </div>
         </div>
 
+<div id="show">
         <div class="col-sm-10 col-md-10">
-                  <div class="row">
-                    <?php $j = 0 ?>
+                  <div class="row" id="sC">
+                    <?php $j = 0; ?>
                       @foreach ($courses as $course)
                         @if ($course->is_new_release == 1)
                           <div class="col-sm-6 col-md-3">
@@ -72,6 +66,8 @@
                       @endforeach
                     </div>
         </div>
+  </div>
+
 
         <!-- substr and insert ... -->
           <?php
@@ -107,4 +103,41 @@
           
         ?>
 
+<script>
+
+  $('.panel-title').click(function()
+  {
+    // Hide and Show a New Release
+      if( $('#sC').attr('style') == "display: none;" )
+      { $('#sC').show(); }
+      else
+      { $('#sC').hide(); }
+    // End Hide and Show
+
+    // console.log($('.panel-title'));
+    // var temp = $('.collapsed');
+
+      // console.log($(this).attr('id'));
+  });
+
+    $('a').click(function() { console.log($(this).attr('data-val'));
+      // $.get( "{{ URL::to('category2')}}/"+'excel', function( data ) {
+        var name = $(this).attr('data-val');
+        $('#show').load("{{ URL::to('show-course-box')}}/"+name);
+      // });
+    });
+
+</script>
+
 @stop
+
+
+
+
+<!-- Test -->
+    <!--     @foreach($categories as $category)
+            @foreach($category->c_course as $x)
+              <?php echo $x->id ?>
+            @endforeach
+        @endforeach --> 
+<!-- Test -->
