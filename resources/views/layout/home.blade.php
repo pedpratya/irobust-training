@@ -4,9 +4,25 @@
 
     <!-- Faith -->
     <link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+    <link href="css/category/search-box.css" rel="stylesheet" media="screen">
     <!-- End Faith -->
 
-
+<div class="container">
+  <div class="row">
+    <div class="home-top-splash">
+                <h1 class="heading light">What course will your life take?</h1>
+                <form action="/courses/search" class="form  pos-r fxac mb40 mt3">
+                    <input type="hidden" name="ref" value="home">
+                    <div class="container">
+                    <div class="search-inp-container ud-search fx">
+                        <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input type="search" name="q" class="search-field form-control quick-search ui-autocomplete-input" placeholder="Find a course on virtually anything" style="text-align: center" autocomplete="off">
+                    </div>
+                        <a type="submit" href="" class="btn btn-default"><i class="glyphicon glyphicon-search"></i>Search</a>
+                    </div>
+                </form>
+            </div>
+    </div>
+  </div>
 
 <!--  -->
 <!--  -->
@@ -51,7 +67,7 @@
             @foreach ($courses as $course)
               @if ($course->is_new_release == 1 && $j < 4)
                 <div class="col-sm-6 col-md-3">
-                  <a href="###">
+                  <a href="{{ URL::to('detail-course')}}/{{ $course->id }}">
                     <div class="thumbnail" style="width:190px; height:250px; ">
                       <!-- Use Picture From course(id) -->
                       <img class="img-rounded" src="images/new_release/course<?php echo $course->id ?>.jpg">
@@ -112,5 +128,14 @@
             //--------------------------------------------------------------------------------------------
           
         ?>
+
+<script type="text/javascript">
+    $('a').click(function() { console.log($(this).attr('data-val'));
+      // $.get( "{{ URL::to('category2')}}/"+'excel', function( data ) {
+        var name = $(this).attr('data-val');
+        $('#show').load("{{ URL::to('show-course-box')}}/"+name);
+      // });
+    });
+</script>
 
         @stop

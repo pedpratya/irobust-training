@@ -47,7 +47,10 @@
                           </ul>
                         </li>
                       </ul>
-                      <a href="" class="btn pull-right" style="background-color: #ED652E;border-color: #d64b12;">Sign in</a>
+                        <a href="http://localhost/irobust-training/public/auth/login" class="btn pull-right" style="background-color: #ED652E;border-color: #d64b12;">
+                          <i class="glyphicon glyphicon-user"></i>
+                          Sign in
+                        </a>
                     </div><!-- /.navbar-collapse -->
                   </div><!-- /.container-fluid -->
                 </nav>
