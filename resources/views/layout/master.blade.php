@@ -10,10 +10,8 @@
     <link rel="stylesheet" href="{!! asset('css/bootstrap.min.css') !!}">
     <!-- Faiith -->
     <link href="css/category/slidebar.css" rel="stylesheet" media="screen">
-    <link href="css/app.css" rel="stylesheet" media="screen">
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
 
     <link rel="stylesheet" href="{!! asset('css/demo.css') !!}">
     </head>
@@ -40,7 +38,6 @@
                         <li>
                         <a class="navbar-brand" href="http://localhost/irobust-training/public/category">Browse Course</a>
                         </li>
-                        <!-- <li class="disabled"><a href="#">Link</a></li> -->
                         <li>
                           <a class="navbar-brand" href="#">Blog</a>
                         </li>
@@ -50,19 +47,12 @@
                           </ul>
                         </li>
                       </ul>
-                      <form class="navbar-form navbar-right" role="search">
-                        <div class="form-search search-only">
-                          <i class="search-icon glyphicon glyphicon-search"></i>
-                          <input type="text" class="form-control search-query">
-                        </div>
-                      </form>
+                      <a href="" class="btn pull-right" style="background-color: #ED652E;border-color: #d64b12;">Sign in</a>
                     </div><!-- /.navbar-collapse -->
                   </div><!-- /.container-fluid -->
                 </nav>
               </div>
     <!-- </div> -->
-
-
   
       @yield('content')
 

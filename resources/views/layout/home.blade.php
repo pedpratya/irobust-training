@@ -1,12 +1,17 @@
  @extends('layout.master')
 
  @section('content')
- <div class="container documents">
+
     <!-- Faith -->
     <link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
     <!-- End Faith -->
 
 
+
+<!--  -->
+<!--  -->
+
+ <div class="container documents">
       <div class="category">  
           <div class="row">
 
@@ -32,10 +37,12 @@
           </div>
       </div>
 
-      <ul>
-        <i> <font face="Light ITALIC" size="12" color="#006600" style="text-decoration: underline" ; > New Release !</font></i>
-        <hr> 
-      </ul>
+    <span class="fxdc card-info tac">
+        <h3 class="tab-title" style="background-color:#CDC8B1">
+          <font color="#ef4338"><i class="glyphicon glyphicon-bookmark"></i></font> <font color="#ff853d">New Release</font>
+        </h3>
+    </span>
+        <hr>
 
 <!-- New Release -->
       <div class="example">          

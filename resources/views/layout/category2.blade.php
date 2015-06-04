@@ -1,11 +1,6 @@
 @extends('layout.master')
 
 @section('content')
-
-    <link rel="stylesheet" href="{!! asset('css/bootstrap.min.css') !!}">
-       <!--  <link rel="stylesheet" href="{!! asset('bootflat/css/bootflat.css') !!}"> -->
-
-
         <div class="col-sm-2 col-md-2">
           <div id="well_slidebar">
             <div class="panel-group" id="accordion">
@@ -26,7 +21,7 @@
                                       <tr>
                                           <td>
                                               <!-- <span class="glyphicon glyphicon-pencil text-primary"></span><a href="http://localhost/irobust-training/public/detail-course$url = route('routeName', $params);">{{$x->name}}</a> -->
-                                              <span class="glyphicon glyphicon-pencil text-primary"></span><a href="http://localhost/irobust-training/public/detail-course">{{$x->name}}</a>
+                                              <span class="glyphicon glyphicon-pencil text-primary"></span><a href="{{ URL::to('detail-course')}}/{{ $x->id }}">{{$x->name}}</a>
                                           </td>
                                       </tr>
                                     @endforeach
@@ -46,7 +41,7 @@
                       @foreach ($courses as $course)
                         @if ($course->is_new_release == 1)
                           <div class="col-sm-6 col-md-3">
-                            <a href="###">
+                            <a href="{{ URL::to('detail-course')}}/{{ $course->id }}">
                               <div class="thumbnail">
                                 <!-- Use Picture From course(id) -->
                                 <img class="img-rounded" src="images/new_release/course<?php echo $course->id ?>.jpg">
@@ -105,20 +100,20 @@
 
 <script>
 
-  $('.panel-title').click(function()
-  {
-    // Hide and Show a New Release
-      if( $('#sC').attr('style') == "display: none;" )
-      { $('#sC').show(); }
-      else
-      { $('#sC').hide(); }
-    // End Hide and Show
+  // $('.panel-title').click(function()
+  // {
+  //   // Hide and Show a New Release
+  //     if( $('#sC').attr('style') == "display: none;" )
+  //     { $('#sC').show(); }
+  //     else
+  //     { $('#sC').hide(); }
+  //   // End Hide and Show
 
-    // console.log($('.panel-title'));
-    // var temp = $('.collapsed');
+  //   // console.log($('.panel-title'));
+  //   // var temp = $('.collapsed');
 
-      // console.log($(this).attr('id'));
-  });
+  //     // console.log($(this).attr('id'));
+  // });
 
     $('a').click(function() { console.log($(this).attr('data-val'));
       // $.get( "{{ URL::to('category2')}}/"+'excel', function( data ) {
@@ -130,14 +125,3 @@
 </script>
 
 @stop
-
-
-
-
-<!-- Test -->
-    <!--     @foreach($categories as $category)
-            @foreach($category->c_course as $x)
-              <?php echo $x->id ?>
-            @endforeach
-        @endforeach --> 
-<!-- Test -->

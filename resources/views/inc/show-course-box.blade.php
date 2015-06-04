@@ -1,11 +1,19 @@
+@yield('box')
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+
+    <link rel="stylesheet" href="{!! asset('css/bootstrap.min.css') !!}">
+       <!--  <link rel="stylesheet" href="{!! asset('bootflat/css/bootflat.css') !!}"> -->
+
        <div class="col-sm-10 col-md-10">
 
                   <div class="row">
-                  @foreach ($categories as $category)
-<!--                     <?php $j = 0 ?> -->
-                      @foreach ($category->c_course as $course)
+                    <?php $j = 0 ?>
+                      @foreach ($courses as $course)
+                        @if ($course->is_new_release == 1)
                           <div class="col-sm-6 col-md-3">
-                            <a href="{{ URL::to('detail-course')}}/{{ $course->id }}">
+                            <a href="###">
                               <div class="thumbnail">
                                 <!-- Use Picture From course(id) -->
                                 <img class="img-rounded" src="images/new_release/course<?php echo $course->id ?>.jpg">
@@ -20,10 +28,9 @@
                               </div>
                             </a>
                           </div>
-<!--                         <?php $j++; ?> -->
+                        <?php $j++; ?>
+                        @endif
                       @endforeach
-                    @endforeach
-<!--                     <?php echo $j ?> -->
                     </div>
         </div>
 
