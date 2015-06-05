@@ -1,15 +1,15 @@
 <?php namespace App\Http\Controllers;
 
-use App\Models\Category;
 use App\Models\Section;
+use App\Models\Course;
+
 
 class DetailCourseContorller extends Controller {
 
-	public function index()
+	public function getIndex($value)
 	{
-		$categories = Category::all();
-		$sections = Section::all();
+		$courses = Course::with('c_section')->where('id', $value )->get();
 
-		return view('layout.detail-course',compact('sections','categories'));
+		return view('layout.detail-course',compact('courses'));
 	}
 }

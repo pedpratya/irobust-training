@@ -27,7 +27,7 @@
   <body>
     <!-- Navbars   ================================================== -->
     <!-- <div class="row"> -->
-              <div class="col-md-12">
+              <div id="titleBar" class="col-md-12">
                 <nav class="navbar navbar-inverse" role="navigation">
                   <div class="container-fluid">
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-5">
@@ -47,8 +47,8 @@
                           </ul>
                         </li>
                       </ul>
-                        <a href="http://localhost/irobust-training/public/auth/login" class="btn pull-right" style="background-color: #ED652E;border-color: #d64b12;">
-                          <i class="glyphicon glyphicon-user"></i>
+                        <a href="http://localhost/irobust-training/public/login" class="btn pull-right" style="background-color: #ED652E;border-color: #d64b12;">
+                          <i class="glyphicon glyphicon-user" id="icon-signin"></i>
                           Sign in
                         </a>
                     </div><!-- /.navbar-collapse -->
@@ -60,13 +60,13 @@
       @yield('content')
 
       <br>
-    <div class="col-md-12" style="height:100%;background-color:#1A1A1A;">
-    <div class="container">
-    <div class="copyRights">
-    <p class="text-center"><br><font color ="white">Copyrights © 2015 - ICB Solution Co.,Ltd.</font></p>
-    </div>
-    </div>
-    </div>
+<!--     <div id="fooTage" class="col-md-12" style="height:100%;background-color:#1A1A1A;">
+      <div class="container">
+        <div class="copyRights">
+          <p class="text-center"><br><font color ="white">Copyrights © 2015 - ICB Solution Co.,Ltd.</font></p>
+        </div>
+      </div>
+    </div> -->
 
   </body>  
 

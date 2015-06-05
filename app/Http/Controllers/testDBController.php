@@ -8,14 +8,6 @@ use App\Models\Section;
 use Illuminate\Http\Request;
 
 class testDBController extends Controller {
-
-	// public function __construct()
-	// {
-	// 	$categories = Category::all();
-	// 	$courses = Course::all();
-	// 	$topics = Topic::all();
-	// 	$sections = Section::all();
-	// }
 	
 
 	public function testCategory()
@@ -29,23 +21,6 @@ class testDBController extends Controller {
 		return view('show',compact('viewDatas'));
 
 	}
-
-	public function testRelation()
-    {
-    	$i = 0;
-    	$viewDatas = Category::with('c_course')->get();
-    		foreach ($viewDatas as $key)
-    		{
-    			echo $key->name ."<br>";
-		    	foreach ( ($key->c_course()->get() ) as $ke) {
-		    		$i++;
-		    		echo $ke->name ."<br>";
-		    	}
-		    }
-		    echo $i;
-		dd($viewDatas->first()->c_course()->first()->name);
-
-    }
 
 	public function testCourse()
 	{
@@ -91,5 +66,46 @@ class testDBController extends Controller {
 		echo '<script type="text/javascript">alert(" Not Found !!! ");</script>';
 		return view('searchData');
 	}
+
+
+	// Test Mapping Ralation on Model
+	public function testRelation_CategoryToCourse()
+    {
+    	$viewDatas = Category::with('c_course')->get();
+    		foreach ($viewDatas as $key)
+    		{
+    			echo $key->name ."<br>";
+		    	foreach ( ($key->c_course()->get() ) as $ke) {
+		    		echo $ke->name ."<br>";
+		    	}
+		    }
+		dd($viewDatas->first()->c_course()->first()->name);
+    }
+
+    public function testRelation_CourseToSection()
+    {
+    	$viewDatas = Course::with('c_section')->get();
+    		foreach ($viewDatas as $key)
+    		{
+    			echo $key->name ."<br>";
+		    	foreach ( ($key->c_section()->get() ) as $ke) {
+		    		echo $ke->name ."<br>";
+		    	}
+		    }
+		dd($viewDatas->first()->c_section()->first()->name);
+    }
+
+    public function testRelation_SectionToTopic()
+    {
+    	$viewDatas = Section::with('s_topic')->get();
+    		foreach ($viewDatas as $key)
+    		{
+    			echo $key->name ."<br>";
+		    	foreach ( ($key->s_topic()->get() ) as $ke) {
+		    		echo $ke->name ."<br>";
+		    	}
+		    }
+		dd($viewDatas->first()->s_topic()->first()->name);
+    }
 
 }

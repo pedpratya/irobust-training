@@ -62,7 +62,7 @@
                                 <span class="current-price"> <h4>${{$course->price}}</h4></span>
                                 </div>
 
-                                <a class="btn btn-primary btn-lg" data-requirelogin="true" href="http://localhost/irobust-training/public/auth/login">
+                                <a class="btn btn-primary btn-lg" data-requirelogin="true" href="http://localhost/irobust-training/public/login">
                                   Take This Course
                                 </a>
                               </div>

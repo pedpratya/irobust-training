@@ -1,0 +1,17 @@
+.list .list-left {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 100px;
+  width: 100px;
+  display: inline-block;
+}
+
+.list .list-right {
+  font-weight: 700;
+}
+
+.list {
+  font-size: 13px;
+}

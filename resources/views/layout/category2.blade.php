@@ -1,6 +1,7 @@
 @extends('layout.master')
 
 @section('content')
+
         <div class="col-sm-2 col-md-2">
           <div id="well_slidebar">
             <div class="panel-group" id="accordion">

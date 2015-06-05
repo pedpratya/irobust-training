@@ -1,0 +1,288 @@
+
+.large-6 {
+  position: relative;
+  width: 50%;
+}
+
+.column, .columns {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  float: left;
+}
+
+form.reg {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background: #F1F1F1;
+  padding: 30px;
+}
+form {
+  margin: 0 0 1em;
+}
+
+button, input {
+  line-height: normal;
+}
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+label {
+  font-size: 0.75em;
+  color: #4d4d4d;
+  cursor: pointer;
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.1875em;
+}
+
+label.digital-tutors {
+  display: inline-block;
+  padding-left: 9px;
+  font-weight: bold;
+  font-size: .65em;
+  margin-top: 10px;
+}
+
+input[type=text], input[type=password] {
+  -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  margin-top: 6px;
+}
+
+element.style {
+  font-size: 9px;
+  font-weight: 600;
+}
+a {
+  color: #ED652E;
+  text-decoration: none;
+  line-height: inherit;
+}
+
+input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+.button {
+  font-weight: normal;
+  border-radius: 3px;
+  position: relative;
+}
+
+button, .button {
+  border-style: solid;
+  border-width: 0px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0 0 1.25em;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  padding-top: 0.75em;
+  padding-right: 1.5em;
+  padding-bottom: 0.8125em;
+  padding-left: 1.5em;
+  font-size: 1em;
+  background-color: #ED652E;
+  border-color: #d64b12;
+  color: #fff;
+}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
+  background-color: #fff;
+  font-family: inherit;
+  border: 0px solid #D1D1D1;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #58585B;
+  display: block;
+  font-size: 1em;
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+  height: 2.4375em;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+
+/* ==================================== */
+
+
+.fancybox-inner .loginbox-v4 {
+  margin: 0;
+  border: 0;
+}
+
+.fxw, .df {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.loginbox-v4 {
+  margin: 30px auto;
+  border: 1px solid #ccc;
+  background: #EDEFF1;
+  padding: 20px;
+  color: #355368;
+  width: 50%;
+  border-radius: 15px;
+}
+
+.loginbox-v4 h4 {
+  font-size: 16px;
+  color: #355368;
+  margin: 0;
+}
+
+.loginbox-v4 .box-col {
+  padding: 20px 20px 10px;
+}
+
+.loginbox-v4 .box-separator {
+  background: #d3d3d3;
+  width: 1px;
+}
+
+.loginbox-v4 .box-right {
+  margin: 0 auto;
+  max-width: 320px;
+}
+
+.loginbox-v4 .box-heading {
+  text-align: center;
+  margin: 0;
+  color: #355368;
+  font-size: 24px;
+  border-bottom: 1px solid #d3d3d3;
+  padding: 10px 0;
+}
+
+.loginbox-v4 .box-footer {
+  border-top: 1px solid #d3d3d3;
+  margin-top: 20px;
+  box-shadow: 0 1px #fff inset;
+  padding-top: 16px;
+  text-align: center;
+}
+
+/*.loginbox-v4 .box-content {
+  border-top: 1px solid #d3d3d3;
+  padding-top: 16px;
+  text-align: center;
+}
+*/
+.loginbox-v4 .manage-fields-wrapper {
+  margin-top: 10px;
+}
+
+
+.loginbox-v4 .manage-fields-wrapper>div {
+  position: relative;
+  margin-top: 10px;
+}
+
+.loginbox-v4 .manage-fields-wrapper input[type=text], .loginbox-v4 .manage-fields-wrapper input[type=email], .loginbox-v4 .manage-fields-wrapper input[type=password] {
+  border-radius: 10px;
+  padding: 10px 10px 10px 20px;
+  height: auto;
+  outline: 0;
+  font-size: 15px;
+  color: #355368;
+}
+
+.loginbox-v4 .manage-fields-wrapper input[type=text]:focus, .loginbox-v4 .manage-fields-wrapper input[type=email]:focus, .loginbox-v4 .manage-fields-wrapper input[type=password]:focus {
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.manage-fields-wrapper, .form-wrapper {
+  padding: 0 0 10px 0;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+
+.manage-fields-wrapper>div:first-child.non-labeled, .form-wrapper>div:first-child.non-labeled {
+  margin-top: 0;
+}
+
+
+.manage-fields-wrapper>div.non-labeled, .form-wrapper>div.non-labeled {
+  margin-top: 15px;
+}
+
+.tooltip-reference {
+  position: relative;
+  clear: both;
+}
+
+
+
+input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+.btn {
+  border: 0;
+  border-radius: 3px;
+}
+
+.btn, .btn-large {
+  text-decoration: none;
+  color: #FFF;
+  background-color: #ED652E;
+}
+
+.btn:hover, .btn-large:hover {
+  background-color: #ED752E;
+}
+
+a {
+  outline: 0!important;
+  font-weight: 400;
+}
+
+a {
+  color: #ED652E;
+  text-decoration: none;
+}
+
+a {
+  background-color: transparent;
+}
+
+.submit-row {
+  text-align: center;
+}
+
+#btn-submit {
+  text-decoration: none;
+  color: #FFF;
+  background-color: #449d44;
+}
+
+#btn-submit:hover {
+  background-color: #44ad44;
+}
